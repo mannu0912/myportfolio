@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — Mannu Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F0F2F5',
+                            card: '#FFFFFF',
+                            'card-alt': '#1C2333',
+                            accent: '#1C2333',
+                            text: '#666666',
+                            muted: '#999999',
+                            navy: '#1C2333',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased">
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white backdrop-blur-md border-b border-[#E8E8E8] z-[90]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="block transition-opacity hover:opacity-80">
+                <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0, 2) scale(0.8)">
+                        <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 30V38M40 24V38" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                    </g>
+                    <text x="45" y="28" fill="#1C2333" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                    <circle cx="122" cy="28" r="3" fill="#1C2333" />
+                </svg>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Home</a>
+                <a href="about.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">About</a>
+                <a href="services.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Services</a>
+                <a href="experience.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="nav-link active text-sm font-medium transition-all relative">Pricing</a>
+                <a href="blog.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Blog</a>
+                <a href="contact.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-2 rounded-[6px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wider hover:bg-[#2E3A50]">
+                    Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden text-brand-navy">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#E8E8E8] overflow-hidden">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Home</a>
+                <a href="about.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">About</a>
+                <a href="services.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Services</a>
+                <a href="experience.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="text-lg font-medium text-brand-navy">Pricing</a>
+                <a href="blog.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Blog</a>
+                <a href="contact.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Contact</a>
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider mt-4">Get In Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-[120px] px-6 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 fade-in text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex flex-col items-center gap-2 mb-6">
+                    <div class="w-6 h-[2px] bg-brand-navy"></div>
+                    <span class="text-[11px] font-bold tracking-[0.1em] uppercase text-brand-muted">Pricing</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8 text-brand-navy">
+                    Transparent <br> Pricing Plans.
+                </h1>
+                <p class="text-xl text-brand-text leading-relaxed mb-10">
+                    Choose the plan that fits your business stage and goals. No hidden fees, just results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-[120px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center gap-4">
+                    <span class="text-sm font-bold uppercase tracking-widest text-brand-navy">Monthly</span>
+                    <button id="pricing-toggle" class="w-14 h-7 bg-[#F0F2F5] border border-[#E8E8E8] rounded-full relative p-1 transition-colors">
+                        <div class="toggle-dot w-5 h-5 bg-brand-navy rounded-full transition-transform"></div>
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm font-bold uppercase tracking-widest text-brand-muted">Yearly</span>
+                        <span class="px-2 py-1 bg-[#E8F5EF] text-[#1D9E75] text-[10px] font-bold rounded-md border border-[#1D9E75]/20">Save 20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter -->
+                <div class="relative bg-white border border-[#EEEEEE] rounded-3xl p-10 flex flex-col shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-bold mb-6 uppercase tracking-widest text-brand-navy">Starter</h3>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-5xl font-display font-bold text-brand-navy">$<span class="price-monthly">299</span><span class="price-yearly hidden">239</span></span>
+                        <span class="text-brand-text">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Basic SEO Audit</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> On-Page Optimisation (10 pages)</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Monthly Reporting</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Email Support</li>
+                    </ul>
+                    <a href="contact.html" class="border border-brand-navy text-brand-navy px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-all">Get Started</a>
+                </div>
+                <!-- Growth -->
+                <div class="relative bg-brand-navy text-white border border-brand-navy rounded-3xl p-10 flex flex-col scale-105 z-10 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-white text-brand-navy text-[10px] font-bold rounded-full uppercase tracking-widest">Best Value</div>
+                    <h3 class="text-xl font-bold mb-6 uppercase tracking-widest text-white">Growth</h3>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-5xl font-display font-bold text-white">$<span class="price-monthly">499</span><span class="price-yearly hidden">399</span></span>
+                        <span class="text-white/60">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-white shrink-0 mt-0.5"></i> Full Technical SEO Audit</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-white shrink-0 mt-0.5"></i> On-Page Optimisation (30 pages)</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-white shrink-0 mt-0.5"></i> Bi-Weekly Reporting</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-white shrink-0 mt-0.5"></i> Priority Support</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-white shrink-0 mt-0.5"></i> 4 Blog Posts/Month</li>
+                    </ul>
+                    <a href="contact.html" class="bg-white text-brand-navy px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider hover:bg-[#F0F2F5] transition-all">Get Started</a>
+                </div>
+                <!-- Pro -->
+                <div class="relative bg-white border border-[#EEEEEE] rounded-3xl p-10 flex flex-col shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-xl font-bold mb-6 uppercase tracking-widest text-brand-navy">Pro</h3>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-5xl font-display font-bold text-brand-navy">$<span class="price-monthly">999</span><span class="price-yearly hidden">799</span></span>
+                        <span class="text-brand-text">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Advanced SEO Strategy</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Unlimited On-Page Optimisation</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Weekly Reporting</li>
+                        <li class="flex gap-3 text-sm leading-relaxed"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-navy shrink-0 mt-0.5"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="contact.html" class="border border-brand-navy text-brand-navy px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider hover:bg-brand-navy hover:text-white transition-all">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-[120px] px-6 bg-brand-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-display font-bold text-brand-navy">Compare Plans.</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-brand-navy text-white text-left">
+                            <th class="p-6 text-sm font-bold uppercase tracking-widest">Feature</th>
+                            <th class="p-6 text-sm font-bold uppercase tracking-widest">Starter</th>
+                            <th class="p-6 text-sm font-bold uppercase tracking-widest">Growth</th>
+                            <th class="p-6 text-sm font-bold uppercase tracking-widest">Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-[#EEEEEE]">
+                            <td class="p-6 font-bold text-brand-navy">SEO Audit</td>
+                            <td class="p-6 text-brand-text">Basic</td>
+                            <td class="p-6 text-brand-text">Full Technical</td>
+                            <td class="p-6 text-brand-text">Advanced Strategy</td>
+                        </tr>
+                        <tr class="border-b border-[#EEEEEE]">
+                            <td class="p-6 font-bold text-brand-navy">On-Page Pages</td>
+                            <td class="p-6 text-brand-text">10 Pages</td>
+                            <td class="p-6 text-brand-text">30 Pages</td>
+                            <td class="p-6 text-brand-text">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-[#EEEEEE]">
+                            <td class="p-6 font-bold text-brand-navy">Reporting</td>
+                            <td class="p-6 text-brand-text">Monthly</td>
+                            <td class="p-6 text-brand-text">Bi-Weekly</td>
+                            <td class="p-6 text-brand-text">Weekly</td>
+                        </tr>
+                        <tr class="border-b border-[#EEEEEE]">
+                            <td class="p-6 font-bold text-brand-navy">Blog Posts</td>
+                            <td class="p-6 text-brand-text">—</td>
+                            <td class="p-6 text-brand-text">4/Month</td>
+                            <td class="p-6 text-brand-text">8/Month</td>
+                        </tr>
+                        <tr class="border-b border-[#EEEEEE]">
+                            <td class="p-6 font-bold text-brand-navy">Support</td>
+                            <td class="p-6 text-brand-text">Email</td>
+                            <td class="p-6 text-brand-text">Priority</td>
+                            <td class="p-6 text-brand-text">Dedicated Manager</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="py-[120px] px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-display font-bold text-brand-navy">Pricing FAQ.</h2>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden border border-[#EEEEEE] shadow-lg">
+                <div class="faq-item bg-white border-b border-[#EEEEEE]">
+                    <button class="faq-button w-full p-6 flex items-center justify-between text-left transition-colors group">
+                        <h3 class="text-base font-bold text-brand-navy">Can I change plans later?</h3>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-brand-navy transition-transform"></i>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <p class="px-6 pb-6 text-brand-text leading-relaxed text-sm">Yes, you can upgrade or downgrade your plan at any time. Changes will take effect in the next billing cycle.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white border-b border-[#EEEEEE]">
+                    <button class="faq-button w-full p-6 flex items-center justify-between text-left transition-colors group">
+                        <h3 class="text-base font-bold text-brand-navy">Is there a long-term contract?</h3>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-brand-navy transition-transform"></i>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <p class="px-6 pb-6 text-brand-text leading-relaxed text-sm">No, all our plans are month-to-month. You can cancel at any time with a 30-day notice.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white border-b border-[#EEEEEE]">
+                    <button class="faq-button w-full p-6 flex items-center justify-between text-left transition-colors group">
+                        <h3 class="text-base font-bold text-brand-navy">What payment methods do you accept?</h3>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-brand-navy transition-transform"></i>
+                    </button>
+                    <div class="faq-content overflow-hidden transition-all duration-300 max-h-0">
+                        <p class="px-6 pb-6 text-brand-text leading-relaxed text-sm">We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-[120px] px-6 bg-brand-card-alt">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="mb-4">
+                        <a href="index.html" class="block transition-opacity hover:opacity-80">
+                            <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(0, 2) scale(0.8)">
+                                    <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M24 30V38M40 24V38" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                                </g>
+                                <text x="45" y="28" fill="white" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                                <circle cx="122" cy="28" r="3" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-[#AAAAAA] text-sm max-w-xs">
+                        SEO Specialist — Driving organic growth for eCommerce and modern businesses through data-led strategies.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-4">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Navigation</h4>
+                        <a href="index.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Home</a>
+                        <a href="about.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">About</a>
+                        <a href="services.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Services</a>
+                        <a href="pricing.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Pricing</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Resources</h4>
+                        <a href="experience.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Experience</a>
+                        <a href="results.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Results</a>
+                        <a href="blog.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Blog</a>
+                        <a href="contact.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Contact</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-[#AAAAAA]">
+                    © 2026 Mannu Kumar. All rights reserved. Built with passion for organic growth.
+                </p>
+                <div class="flex gap-8">
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

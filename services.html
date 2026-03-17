@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Mannu Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F0F2F5',
+                            card: '#FFFFFF',
+                            'card-alt': '#1C2333',
+                            accent: '#1C2333',
+                            text: '#666666',
+                            muted: '#999999',
+                            navy: '#1C2333',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased">
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white backdrop-blur-md border-b border-[#E8E8E8] z-[90]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="block transition-opacity hover:opacity-80">
+                <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0, 2) scale(0.8)">
+                        <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 30V38M40 24V38" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                    </g>
+                    <text x="45" y="28" fill="#1C2333" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                    <circle cx="122" cy="28" r="3" fill="#1C2333" />
+                </svg>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Home</a>
+                <a href="about.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">About</a>
+                <a href="services.html" class="nav-link active text-sm font-medium transition-all relative">Services</a>
+                <a href="experience.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Pricing</a>
+                <a href="blog.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Blog</a>
+                <a href="contact.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-2 rounded-[6px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wider hover:bg-[#2E3A50]">
+                    Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden text-brand-navy">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#E8E8E8] overflow-hidden">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Home</a>
+                <a href="about.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">About</a>
+                <a href="services.html" class="text-lg font-medium text-brand-navy">Services</a>
+                <a href="experience.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Pricing</a>
+                <a href="blog.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Blog</a>
+                <a href="contact.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Contact</a>
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider mt-4">Get In Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-[120px] px-6 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 fade-in text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex flex-col items-center gap-2 mb-6">
+                    <div class="w-6 h-[2px] bg-brand-navy"></div>
+                    <span class="text-[11px] font-bold tracking-[0.1em] uppercase text-brand-muted">Services</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8 text-brand-navy">
+                    Specialised SEO <br> Solutions.
+                </h1>
+                <p class="text-xl text-brand-text leading-relaxed mb-10">
+                    I provide a range of SEO services tailored to the unique needs of eCommerce and modern digital businesses.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-[120px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-brand-bg p-10 rounded-3xl border border-[#EEEEEE] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-brand-navy text-white rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="search" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-display font-bold text-brand-navy mb-6">On-Page SEO</h3>
+                    <p class="text-brand-text leading-relaxed mb-8">I optimise every element of your website's pages — from meta tags and headers to content structure and internal linking — ensuring maximum visibility for your target keywords.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Keyword Research & Mapping</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Meta Tag Optimisation</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Content Gap Analysis</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Internal Link Architecture</li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-brand-bg p-10 rounded-3xl border border-[#EEEEEE] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-brand-navy text-white rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="settings" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-display font-bold text-brand-navy mb-6">Technical SEO</h3>
+                    <p class="text-brand-text leading-relaxed mb-8">I fix the hidden technical issues that prevent search engines from crawling and indexing your site effectively, improving your site's overall performance and rankings.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Site Speed Optimisation</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Mobile-First Indexing Audit</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Schema Markup Implementation</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> XML Sitemap & Robots.txt</li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-brand-bg p-10 rounded-3xl border border-[#EEEEEE] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-brand-navy text-white rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-display font-bold text-brand-navy mb-6">Local SEO</h3>
+                    <p class="text-brand-text leading-relaxed mb-8">I help you dominate local search results and the Google Local Pack, ensuring your business is the first choice for customers in your area.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Google Business Profile Optimisation</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Local Citation Building</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Review Management Strategy</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Local Content Strategy</li>
+                    </ul>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-brand-bg p-10 rounded-3xl border border-[#EEEEEE] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-brand-navy text-white rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-display font-bold text-brand-navy mb-6">eCommerce SEO</h3>
+                    <p class="text-brand-text leading-relaxed mb-8">I specialise in driving organic traffic to online stores, focusing on product page optimisation, category hierarchy, and conversion-led content.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Shopify & WooCommerce SEO</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Product Page Optimisation</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Faceted Navigation Fixes</li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> ROI-Focused Keyword Strategy</li>
+                    </ul>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-brand-bg p-10 rounded-3xl border border-[#EEEEEE] shadow-sm hover:shadow-xl transition-all duration-300 md:col-span-2">
+                    <div class="w-16 h-16 bg-brand-navy text-white rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="pen-tool" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-3xl font-display font-bold text-brand-navy mb-6">Content Strategy & AI SEO</h3>
+                    <p class="text-brand-text leading-relaxed mb-8">I build entity-based content strategies that leverage AI for research and efficiency while maintaining high-quality, human-centric content that ranks and converts.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Entity-Based Content Planning</li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> AI-Assisted Topic Research</li>
+                        </ul>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Content Velocity Management</li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-brand-navy"><i data-lucide="check" class="w-4 h-4"></i> Semantic SEO Optimisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work -->
+    <section class="py-[120px] px-6 bg-brand-card-alt text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-display font-bold mb-6">How I Work.</h2>
+                <p class="text-[#AAAAAA] max-w-2xl mx-auto">A transparent, data-driven process designed for long-term success.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="relative">
+                    <div class="text-[120px] font-display font-bold text-white/5 absolute -top-20 left-0">01</div>
+                    <h4 class="text-xl font-bold mb-4 relative z-10">Strategy First</h4>
+                    <p class="text-[#AAAAAA] text-sm leading-relaxed relative z-10">We start with a deep dive into your business to build a custom roadmap that aligns with your specific goals.</p>
+                </div>
+                <div class="relative">
+                    <div class="text-[120px] font-display font-bold text-white/5 absolute -top-20 left-0">02</div>
+                    <h4 class="text-xl font-bold mb-4 relative z-10">Data-Led Execution</h4>
+                    <p class="text-[#AAAAAA] text-sm leading-relaxed relative z-10">Every change is backed by data. We implement technical fixes and content updates that move the needle.</p>
+                </div>
+                <div class="relative">
+                    <div class="text-[120px] font-display font-bold text-white/5 absolute -top-20 left-0">03</div>
+                    <h4 class="text-xl font-bold mb-4 relative z-10">Transparent Reporting</h4>
+                    <p class="text-[#AAAAAA] text-sm leading-relaxed relative z-10">You'll always know what's happening. I provide clear, jargon-free reports that show real progress and ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Teaser -->
+    <section class="py-[120px] px-6 bg-brand-bg">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-display font-bold text-brand-navy mb-8">Transparent Pricing for Every Stage.</h2>
+            <p class="text-brand-text mb-10 max-w-xl mx-auto">Whether you're a small local business or a growing eCommerce brand, I have a plan that fits your needs.</p>
+            <a href="pricing.html" class="bg-brand-navy text-white px-10 py-4 rounded-[6px] font-bold transition-all duration-300 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-wider hover:bg-[#2E3A50]">
+                View Pricing Plans <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-[120px] px-6 bg-brand-card-alt">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="mb-4">
+                        <a href="index.html" class="block transition-opacity hover:opacity-80">
+                            <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(0, 2) scale(0.8)">
+                                    <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M24 30V38M40 24V38" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                                </g>
+                                <text x="45" y="28" fill="white" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                                <circle cx="122" cy="28" r="3" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-[#AAAAAA] text-sm max-w-xs">
+                        SEO Specialist — Driving organic growth for eCommerce and modern businesses through data-led strategies.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-4">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Navigation</h4>
+                        <a href="index.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Home</a>
+                        <a href="about.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">About</a>
+                        <a href="services.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Services</a>
+                        <a href="pricing.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Pricing</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Resources</h4>
+                        <a href="experience.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Experience</a>
+                        <a href="results.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Results</a>
+                        <a href="blog.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Blog</a>
+                        <a href="contact.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Contact</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-[#AAAAAA]">
+                    © 2026 Mannu Kumar. All rights reserved. Built with passion for organic growth.
+                </p>
+                <div class="flex gap-8">
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

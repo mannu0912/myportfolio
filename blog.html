@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Mannu Kumar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F0F2F5',
+                            card: '#FFFFFF',
+                            'card-alt': '#1C2333',
+                            accent: '#1C2333',
+                            text: '#666666',
+                            muted: '#999999',
+                            navy: '#1C2333',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased">
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white backdrop-blur-md border-b border-[#E8E8E8] z-[90]">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="block transition-opacity hover:opacity-80">
+                <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0, 2) scale(0.8)">
+                        <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 30V38M40 24V38" stroke="#1C2333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                    </g>
+                    <text x="45" y="28" fill="#1C2333" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                    <circle cx="122" cy="28" r="3" fill="#1C2333" />
+                </svg>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Home</a>
+                <a href="about.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">About</a>
+                <a href="services.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Services</a>
+                <a href="experience.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Pricing</a>
+                <a href="blog.html" class="nav-link active text-sm font-medium transition-all relative">Blog</a>
+                <a href="contact.html" class="nav-link text-sm font-medium transition-all relative hover:text-brand-navy">Contact</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-2 rounded-[6px] font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wider hover:bg-[#2E3A50]">
+                    Get In Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden text-brand-navy">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#E8E8E8] overflow-hidden">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Home</a>
+                <a href="about.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">About</a>
+                <a href="services.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Services</a>
+                <a href="experience.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Experience</a>
+                <a href="results.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Results</a>
+                <a href="pricing.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Pricing</a>
+                <a href="blog.html" class="text-lg font-medium text-brand-navy">Blog</a>
+                <a href="contact.html" class="text-lg font-medium text-brand-text hover:text-brand-navy">Contact</a>
+                <a href="contact.html" class="bg-brand-navy text-white px-8 py-4 rounded-[6px] font-bold text-center uppercase tracking-wider mt-4">Get In Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-[120px] px-6 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 fade-in text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex flex-col items-center gap-2 mb-6">
+                    <div class="w-6 h-[2px] bg-brand-navy"></div>
+                    <span class="text-[11px] font-bold tracking-[0.1em] uppercase text-brand-muted">Blog</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-display font-bold leading-[0.9] mb-8 text-brand-navy">
+                    SEO Insights & <br> Resources.
+                </h1>
+                <p class="text-xl text-brand-text leading-relaxed mb-10">
+                    Stay up to date with the latest trends, strategies, and case studies in the world of search engine optimisation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-[120px] px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Search and Filter -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+                <div class="relative w-full md:w-96">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-muted"></i>
+                    <input type="text" id="blog-search" placeholder="Search articles..." class="w-full pl-12 pr-4 py-3 bg-brand-bg border border-[#EEEEEE] rounded-full text-sm focus:outline-none focus:border-brand-navy transition-all">
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="category-btn active px-6 py-2 bg-brand-navy text-white rounded-full text-xs font-bold uppercase tracking-widest transition-all" data-category="all">All</button>
+                    <button class="category-btn px-6 py-2 bg-white text-brand-navy border border-[#EEEEEE] rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-bg transition-all" data-category="case-study">Case Study</button>
+                    <button class="category-btn px-6 py-2 bg-white text-brand-navy border border-[#EEEEEE] rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-bg transition-all" data-category="seo-tips">SEO Tips</button>
+                    <button class="category-btn px-6 py-2 bg-white text-brand-navy border border-[#EEEEEE] rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-bg transition-all" data-category="strategy">Strategy</button>
+                    <button class="category-btn px-6 py-2 bg-white text-brand-navy border border-[#EEEEEE] rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-bg transition-all" data-category="technical">Technical</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="case-study">
+                    <div class="h-[200px] bg-gradient-to-br from-[#F0F2F5] to-[#E5E7EB] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">CASE STUDY</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Mar 10, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">How I Took an Agriculture Brand from 0 to 170% Organic Growth</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-clamp-2">A deep dive into the strategy, content architecture, and technical fixes that transformed a niche agriculture brand's online presence.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="seo-tips">
+                    <div class="h-[200px] bg-gradient-to-br from-[#E5E7EB] to-[#D1D5DB] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">SEO TIPS</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Feb 24, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">The Local SEO Checklist Every Small Business Needs in 2026</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-clamp-2">From Google Business Profile optimisation to citation building — the exact checklist I use to get small businesses ranking in the local pack.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="technical">
+                    <div class="h-[200px] bg-gradient-to-br from-[#D1D5DB] to-[#9CA3AF] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">TECHNICAL</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Feb 10, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">Why Technical SEO is the Foundation of Every Winning Strategy</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-clamp-2">No amount of content or links can save a technically broken website. Here's why I always start with a full technical audit.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                <!-- Blog Post 4 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="strategy">
+                    <div class="h-[200px] bg-gradient-to-br from-[#9CA3AF] to-[#4B5563] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">STRATEGY</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Jan 28, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">Entity-Based SEO: The Future of Content Optimisation</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-clamp-2">Moving beyond keywords to entities. How to build a content strategy that search engines actually understand.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                <!-- Blog Post 5 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="seo-tips">
+                    <div class="h-[200px] bg-gradient-to-br from-[#4B5563] to-[#1F2937] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">SEO TIPS</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Jan 15, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">5 Shopify SEO Mistakes That Are Killing Your Sales</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-clamp-2">Common pitfalls eCommerce store owners make and how to fix them for better organic visibility.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                <!-- Blog Post 6 -->
+                <div class="blog-card bg-white rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all group" data-category="strategy">
+                    <div class="h-[200px] bg-gradient-to-br from-[#1F2937] to-[#111827] relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="px-3 py-1 bg-brand-bg text-brand-text text-[10px] font-bold rounded-full uppercase tracking-widest border border-[#EEEEEE]">STRATEGY</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs text-brand-muted">Jan 02, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-navy transition-colors leading-tight">Building a Sustainable Backlink Profile in 2026</h3>
+                        <p class="text-brand-text text-sm mb-6 leading-relaxed line-relaxed line-clamp-2">Quality over quantity. How to earn high-authority backlinks that actually move the needle for your rankings.</p>
+                        <a href="#" class="text-brand-navy text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-20 flex justify-center gap-2">
+                <button class="w-10 h-10 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center">1</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-[#EEEEEE] text-brand-navy font-bold flex items-center justify-center hover:bg-brand-bg transition-all">2</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-[#EEEEEE] text-brand-navy font-bold flex items-center justify-center hover:bg-brand-bg transition-all">3</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-[#EEEEEE] text-brand-navy font-bold flex items-center justify-center hover:bg-brand-bg transition-all"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-[120px] px-6 bg-brand-bg">
+        <div class="max-w-4xl mx-auto bg-brand-card-alt rounded-3xl p-12 text-center text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl font-display font-bold mb-6">Get SEO Insights in Your Inbox.</h2>
+                <p class="text-[#AAAAAA] mb-10 max-w-xl mx-auto">Join 2,000+ marketers and business owners who get my bi-weekly SEO tips and case studies.</p>
+                <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-6 py-4 bg-white/10 border border-white/20 rounded-[6px] text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all">
+                    <button type="submit" class="bg-white text-brand-navy px-8 py-4 rounded-[6px] font-bold uppercase tracking-wider hover:bg-[#F0F2F5] transition-all">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-[120px] px-6 bg-brand-card-alt">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="mb-4">
+                        <a href="index.html" class="block transition-opacity hover:opacity-80">
+                            <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(0, 2) scale(0.8)">
+                                    <path d="M8 38V14L24 30L32 22L40 14M40 14H30M40 14V24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M24 30V38M40 24V38" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+                                </g>
+                                <text x="45" y="28" fill="white" style="font: bold 24px 'Syne', sans-serif; letter-spacing: -0.05em">Mannu</text>
+                                <circle cx="122" cy="28" r="3" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-[#AAAAAA] text-sm max-w-xs">
+                        SEO Specialist — Driving organic growth for eCommerce and modern businesses through data-led strategies.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-4">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Navigation</h4>
+                        <a href="index.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Home</a>
+                        <a href="about.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">About</a>
+                        <a href="services.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Services</a>
+                        <a href="pricing.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Pricing</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Resources</h4>
+                        <a href="experience.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Experience</a>
+                        <a href="results.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Results</a>
+                        <a href="blog.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Blog</a>
+                        <a href="contact.html" class="text-[#AAAAAA] hover:text-white transition-colors text-sm">Contact</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#AAAAAA] hover:text-white hover:border-white transition-all">
+                            <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-[#AAAAAA]">
+                    © 2026 Mannu Kumar. All rights reserved. Built with passion for organic growth.
+                </p>
+                <div class="flex gap-8">
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-[#AAAAAA] hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
